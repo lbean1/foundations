@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETHS Foundations Art — 10th Grade Curriculum</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #1e4620;
+    --green-mid: #2C5F2E;
+    --green-light: #D4E8D4;
+    --blue-mid: #1a5c8a;
+    --blue-light: #d0e8f5;
+    --cream: #f7f4ef;
+    --ink: #1a1a18;
+    --ink-muted: #5a5a54;
+    --ink-faint: #9a9a90;
+    --border: rgba(26,26,24,0.12);
+    --border-strong: rgba(26,26,24,0.22);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    border-bottom: 1px solid var(--border-strong);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    z-index: 100;
+  }
+  .site-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .site-title span {
+    color: var(--green-mid);
+    font-weight: 500;
+  }
+  .header-nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+  .header-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .header-nav a:hover { color: var(--ink); }
+
+  /* HERO */
+  .hero {
+    padding: 72px 40px 52px;
+    max-width: 900px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--green-mid);
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: var(--ink-muted);
+    max-width: 560px;
+    line-height: 1.65;
+  }
+  .arc-pills {
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  .arc-pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .arc-pill.accent {
+    background: var(--green-dark);
+    color: #fff;
+    border-color: var(--green-dark);
+  }
+
+  /* MAIN LAYOUT */
+  main { padding: 0 40px 80px; }
+
+  /* SECTION HEADERS */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 44px 0 18px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .section-header p {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+  }
+
+  /* LEGEND */
+  .legend {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .leg { display: flex; align-items: center; gap: 7px; }
+  .leg-dot {
+    width: 11px; height: 11px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .leg span {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* FLOW GRID */
+  .flow-outer { overflow-x: auto; padding-bottom: 12px; }
+  .flow-row {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+    min-width: max-content;
+  }
+  .unit-col { width: 162px; display: flex; flex-direction: column; gap: 6px; }
+  .unit-col-header {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 0 2px 6px;
+    line-height: 1.5;
+  }
+  .arrow-spacer {
+    padding-top: 38px;
+    color: var(--ink-faint);
+    font-size: 16px;
+    flex-shrink: 0;
+    width: 18px;
+    text-align: center;
+  }
+
+  /* CARDS */
+  .card {
+    border-radius: 6px;
+    padding: 10px 11px;
+    cursor: pointer;
+    transition: opacity 0.12s, transform 0.1s;
+    position: relative;
+    border: 1.5px solid transparent;
+  }
+  .card:hover { transform: translateY(-1px); }
+  .card.type-confirmed { background: var(--green-mid); }
+  .card.type-flex { background: var(--blue-mid); }
+  .card.type-alt { background: #fff; border-color: var(--border-strong); }
+  .card.highlighted { box-shadow: 0 0 0 2.5px var(--cream), 0 0 0 4.5px var(--green-mid); }
+  .card.type-flex.highlighted { box-shadow: 0 0 0 2.5px var(--cream), 0 0 0 4.5px var(--blue-mid); }
+  .card.dimmed { opacity: 0.14; }
+
+  .card-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.08em;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .type-confirmed .card-badge, .type-flex .card-badge {
+    background: rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+  }
+  .type-alt .card-badge {
+    background: var(--green-light);
+    color: var(--green-dark);
+  }
+
+  .card-name {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+  .type-confirmed .card-name, .type-flex .card-name { color: #fff; }
+  .type-alt .card-name { color: var(--ink); }
+
+  .card-media {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+  .type-confirmed .card-media, .type-flex .card-media { color: rgba(255,255,255,0.55); }
+  .type-alt .card-media { color: var(--ink-faint); }
+
+  .card-note {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .type-confirmed .card-note, .type-flex .card-note { color: rgba(255,255,255,0.7); }
+  .type-alt .card-note { color: var(--ink-muted); font-style: italic; }
+
+  .card-cue {
+    font-size: 9px;
+    margin-top: 6px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    line-height: 1.35;
+  }
+  .type-confirmed .card-cue, .type-flex .card-cue {
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.78);
+  }
+  .type-alt .card-cue {
+    background: rgba(0,0,0,0.04);
+    color: var(--ink-muted);
+  }
+
+  .card-link {
+    display: inline-block;
+    margin-top: 7px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 3px 7px;
+    border-radius: 3px;
+    transition: background 0.12s;
+  }
+  .type-confirmed .card-link, .type-flex .card-link {
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.9);
+  }
+  .type-confirmed .card-link:hover, .type-flex .card-link:hover {
+    background: rgba(255,255,255,0.28);
+  }
+  .type-alt .card-link {
+    background: rgba(0,0,0,0.05);
+    color: var(--ink-muted);
+  }
+  .type-alt .card-link:hover { background: rgba(0,0,0,0.1); }
+
+  /* CONTROLS */
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-reset {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    background: none;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-muted);
+    border-radius: 4px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .btn-reset:hover { background: rgba(0,0,0,0.05); }
+  .hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    font-style: italic;
+  }
+
+  /* TRAJECTORIES */
+  .traj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  .traj-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.12s, background 0.12s;
+    background: #fff;
+  }
+  .traj-card:hover { border-color: var(--border-strong); }
+  .traj-card.t-active {
+    border-color: var(--green-mid);
+    border-width: 1.5px;
+    background: #fff;
+  }
+  .traj-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .traj-seq {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--green-mid);
+    line-height: 1.8;
+    margin-bottom: 7px;
+    letter-spacing: 0.03em;
+  }
+  .traj-why {
+    font-size: 11px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  .traj-cohort {
+    font-size: 10px;
+    color: var(--ink-faint);
+    font-style: italic;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.04);
+    line-height: 1.4;
+  }
+
+  /* THREADS */
+  .threads-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .thread-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .thread-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #9070C0;
+    flex-shrink: 0;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+  }
+
+  @media (max-width: 600px) {
+    header, main, footer, .hero { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-title">ETHS Art — <span>Foundations / 10th Grade</span></div>
+  <nav class="header-nav">
+    <a href="#flowchart">Flowchart</a>
+    <a href="#trajectories">Trajectories</a>
+    <a href="#threads">Threads</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">Evanston Township High School · Visual Arts</div>
+  <h1>10th Grade<br><em>Curriculum Map</em></h1>
+  <p class="hero-sub">An interactive planning tool for sequencing units, exploring alternate trajectories, and navigating the year based on your cohort. Click any unit to see what plays well with it.</p>
+  <div class="arc-pills">
+    <div class="arc-pill accent">I → We → Lineage</div>
+    <div class="arc-pill">7 units · ~75 class days</div>
+    <div class="arc-pill">A/B block · alternating rosters</div>
+    <div class="arc-pill">3 running threads</div>
+  </div>
+</div>
+
+<main>
+
+  <div id="flowchart">
+    <div class="section-header">
+      <h2>Unit Flowchart</h2>
+      <p>Click a card to highlight compatible units · small link opens unit page</p>
+    </div>
+
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:var(--green-mid)"></div><span>confirmed</span></div>
+      <div class="leg"><div class="leg-dot" style="background:var(--blue-mid)"></div><span>confirmed — cohort flex</span></div>
+      <div class="leg"><div class="leg-dot" style="background:#fff;border:1px solid var(--border-strong)"></div><span>alternate / plug-and-play</span></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-reset" onclick="resetAll()">clear selection</button>
+      <span class="hint">click any card to see compatible options across the year</span>
+    </div>
+
+    <div class="flow-outer">
+      <div class="flow-row" id="flowRow"></div>
+    </div>
+  </div>
+
+  <div id="threads" style="margin-top: 8px;">
+    <div class="section-header">
+      <h2>Running Threads</h2>
+      <p>Span all units · run in parallel to the main sequence</p>
+    </div>
+    <div class="threads-row">
+      <div class="thread-tag"><div class="thread-dot"></div>Sketchbook — daily practice, 4 criteria, graded at MP checkpoints</div>
+      <div class="thread-tag"><div class="thread-dot"></div>Friday GCSE artist response — carries conceptual load all year</div>
+      <div class="thread-tag"><div class="thread-dot"></div>Accordion Book — vocabulary added as each term surfaces in context</div>
+    </div>
+  </div>
+
+  <div id="trajectories">
+    <div class="section-header">
+      <h2>Named Trajectories</h2>
+      <p>Click to highlight · click again to clear</p>
+    </div>
+    <div class="traj-grid" id="trajGrid"></div>
+  </div>
+
+</main>
+
+<footer>
+  <p>ETHS Foundations Art · 10th Grade · Internal Planning Tool</p>
+  <p>← <a href="#flowchart" style="color:var(--ink-faint);text-decoration:none;">back to top</a></p>
+</footer>
+
+<script>
+const UNITS = [
+  { id:'u1', num:1, classes:6, theme:'Learning to See', opts:[
+    { id:'u1-c', type:'confirmed', badge:'Unit 1 · 6 classes', name:'Reference Unit', media:'drawing', note:'3-photo constraint. How do artists get ideas? Baseline read for teacher.', cue:'Universal — works for all cohorts', page:'units/unit1-reference.html' },
+    { id:'u1-a', type:'alt', badge:'alt', name:'Ballpoint Observational', media:'ballpoint pen', note:'No erasing. Sustained commitment to looking. Highly structured entry.', cue:'Cohorts needing strong structure from day 1', page:null },
+    { id:'u1-b', type:'alt', badge:'alt', name:'Ink Field Notes', media:'ink', note:'Quick observational sketches of the immediate environment. What do you notice when you can\'t undo a mark?', cue:'Cohorts with prior drawing confidence', page:null },
+  ]},
+  { id:'u2', num:2, classes:10, theme:'Identity & Heroes', opts:[
+    { id:'u2-c', type:'confirmed', badge:'Unit 2 · 10 classes', name:'Hero Trading Cards', media:'colored pencil', note:'Format before stylization. Color theory + cultural pattern backgrounds. Who do you come from?', cue:'Strong medium shift after Unit 1 drawing', page:'units/unit2-trading-cards.html' },
+    { id:'u2-a', type:'alt', badge:'alt', name:'The Shape of You', media:'pastels', note:'Silhouette + personal symbols in pastel. What do your symbols say your face doesn\'t?', cue:'Cohorts who respond to expressive/symbolic work', page:null },
+    { id:'u2-b', type:'alt', badge:'alt', name:'Ink Hero Portrait', media:'ink', note:'Bold ink portrait of a personal hero with symbol-based background.', cue:'Works well if Unit 1 used ink or ballpoint', page:null },
+  ]},
+  { id:'u3', num:3, classes:16, theme:'Folklore & Storytelling', opts:[
+    { id:'u3-c', type:'confirmed', badge:'Unit 3 · 16 classes', name:'Folklore Etching', media:'drypoint printmaking', note:'Cultural folklore research → drypoint etching. Waitsgiving Do Now thread. Mark-making for value.', cue:'Strong medium contrast after colored pencil', page:'units/unit3-folklore-etching.html' },
+    { id:'u3-a', type:'alt', badge:'alt', name:'Illustrated Folklore Painting', media:'watercolor', note:'Folklore scene in watercolor with decorative border. Good swap if press unavailable.', cue:'When printmaking access is limited', page:null },
+    { id:'u3-b', type:'alt', badge:'alt', name:'Folklore Comic / Storyboard', media:'drawing + ink', note:'Sequential comic of a folktale. What moment do you choose to show?', cue:'Cohorts with strong narrative or comics interest', page:null },
+  ]},
+  { id:'u4', num:4, classes:12, theme:'The Face & World Behind It', opts:[
+    { id:'u4-c', type:'confirmed', badge:'Unit 4 · 12 classes', name:'Fractured Portraits', media:'drawing — value', note:'Viewfinder + value focus. Self-portrait with interior world background. Returns to drawing.', cue:'Deepens baseline drawing skill from Unit 1', page:'units/unit4-fractured-portraits.html' },
+    { id:'u4-a', type:'alt', badge:'alt', name:'Mask Drawing', media:'pastels', note:'Find a mask with meaning. Zoom in until it fills the page. Push color relationships.', cue:'Cohorts wanting to extend color work from Unit 2', page:null },
+    { id:'u4-b', type:'alt', badge:'alt', name:'The World Inside', media:'watercolor', note:'Silhouette outside, invented interior landscape within. Technically demanding.', cue:'Advanced or confident cohorts only', page:null },
+  ]},
+  { id:'u5', num:5, classes:null, theme:'Collage', opts:[
+    { id:'u5-a', type:'flex', badge:'Option A', name:'Fragmented Faces', media:'collage', note:'Collaged portrait from found images. Extends portrait thinking into new medium.', cue:'Natural after Fractured Portraits or Mask Drawing', page:'units/unit5-collage.html' },
+    { id:'u5-b', type:'flex', badge:'Option B', name:'Silhouette Happy Place', media:'collage', note:'Silhouette filled with collaged images of a meaningful place. Warmer, celebratory.', cue:'Cohorts needing lighter register after portrait work', page:'units/unit5-collage.html' },
+  ]},
+  { id:'u6', num:6, classes:null, theme:'Painting', opts:[
+    { id:'u6-a', type:'flex', badge:'Option A', name:'Pixelated Still Life', media:'acrylic', note:'Grid-based observational painting. Thematic shift back to seeing. New medium.', cue:'Works after either collage option', page:'units/unit6-painting.html' },
+    { id:'u6-b', type:'flex', badge:'Option B', name:'Folklore Folk Art Painting', media:'acrylic', note:'Bold flat acrylic in a folk art tradition. Reactivates Unit 3 folklore research.', cue:'Best if folklore etching was especially generative', page:'units/unit6-painting.html' },
+  ]},
+  { id:'u7', num:7, classes:null, theme:'Paper Pulp Figures', opts:[
+    { id:'u7-a', type:'flex', badge:'Option A', name:'Community Symbol', media:'paper pulp / 3D', note:'Student builds a collective community symbol for the wall installation.', cue:'Strong after Silhouette Happy Place', page:'units/unit7-paper-pulp.html' },
+    { id:'u7-b', type:'flex', badge:'Option B', name:'Folklore Character', media:'paper pulp / 3D', note:'Student builds their folklore character for the wall installation. Closes the folklore thread.', cue:'Strong after Folklore Folk Art Painting', page:'units/unit7-paper-pulp.html' },
+  ]},
+];
+
+const STRONG_PAIRS = new Set([
+  'u1-c+u2-c','u1-c+u2-a','u1-c+u2-b',
+  'u1-a+u2-b','u1-a+u2-c',
+  'u1-b+u2-b','u1-b+u2-c',
+  'u2-c+u3-c','u2-c+u3-a','u2-c+u3-b',
+  'u2-a+u3-c','u2-a+u3-b',
+  'u2-b+u3-b','u2-b+u3-c','u2-b+u3-a',
+  'u3-c+u4-c','u3-c+u4-a',
+  'u3-a+u4-c','u3-a+u4-b','u3-a+u4-a',
+  'u3-b+u4-c','u3-b+u4-a',
+  'u4-c+u5-a','u4-c+u5-b',
+  'u4-a+u5-a','u4-b+u5-b','u4-b+u5-a',
+  'u5-a+u6-a','u5-a+u6-b',
+  'u5-b+u6-a','u5-b+u6-b',
+  'u6-a+u7-a','u6-a+u7-b',
+  'u6-b+u7-b','u6-b+u7-a',
+  'u5-b+u7-a','u3-c+u7-b',
+]);
+
+const PATHS = [
+  { id:'p1', name:'The Standard Arc',
+    ids:['u1-c','u2-c','u3-c','u4-c','u5-a','u6-a','u7-a'],
+    seq:'Reference → Trading Cards → Folklore Etching\n→ Fractured Portraits → Fragmented Faces\n→ Pixelated Still Life → Community Symbol',
+    why:'Maximum medium variety across the year. Every unit introduces something new. Widest technical foundation.',
+    cohort:'When to use: most cohorts — this is the designed backbone sequence' },
+  { id:'p2', name:'The Folklore Thread',
+    ids:['u1-c','u2-c','u3-c','u4-c','u5-a','u6-b','u7-b'],
+    seq:'Reference → Trading Cards → Folklore Etching\n→ Fractured Portraits → Fragmented Faces\n→ Folk Art Painting → Folklore Character',
+    why:'Folklore research from Unit 3 resurfaces in Units 6 and 7. The wall installation closes a year-long story arc.',
+    cohort:'When to use: folklore unit was the most generative moment of the year' },
+  { id:'p3', name:'The Community Arc',
+    ids:['u1-c','u2-c','u3-c','u4-c','u5-b','u6-a','u7-a'],
+    seq:'Reference → Trading Cards → Folklore Etching\n→ Fractured Portraits → Silhouette Happy Place\n→ Pixelated Still Life → Community Symbol',
+    why:'Tone shifts after portrait work into warmth and place. Ends with a collective outward-facing installation.',
+    cohort:'When to use: cohort has strong community identity; portrait work felt heavy' },
+  { id:'p4', name:'The Line-Forward Path',
+    ids:['u1-a','u2-b','u3-b','u4-c','u5-a','u6-a','u7-b'],
+    seq:'Ballpoint Observational → Ink Hero Portrait\n→ Folklore Comic → Fractured Portraits\n→ Fragmented Faces → Pixelated Still Life → Folklore Character',
+    why:'Line-based media build draftsmanship across early units. Color and 3D enter only in the flex zone.',
+    cohort:'When to use: cohort needs technical confidence; illustration or comics interest' },
+  { id:'p5', name:'The Color-Forward Path',
+    ids:['u1-c','u2-a','u3-a','u4-a','u5-b','u6-b','u7-b'],
+    seq:'Reference → Shape of You (pastels)\n→ Illustrated Folklore Painting → Mask Drawing\n→ Silhouette Happy Place → Folk Art Painting → Folklore Character',
+    why:'Color and surface dominate across the year. Rich expressive range. Works when no press is available.',
+    cohort:'When to use: expressive/color-responsive cohort; no printmaking press available' },
+];
+
+let selected = {};
+let activePath = null;
+
+function buildFlow() {
+  const row = document.getElementById('flowRow');
+  UNITS.forEach((unit, i) => {
+    const col = document.createElement('div');
+    col.className = 'unit-col';
+    const hdr = document.createElement('div');
+    hdr.className = 'unit-col-header';
+    hdr.textContent = `U${unit.num}${unit.classes ? ' · ' + unit.classes + ' cl' : ' · flex'} — ${unit.theme}`;
+    col.appendChild(hdr);
+    unit.opts.forEach(opt => {
+      const card = document.createElement('div');
+      card.className = `card type-${opt.type === 'flex' ? 'flex' : opt.type === 'confirmed' ? 'confirmed' : 'alt'}`;
+      card.id = opt.id;
+      card.onclick = (e) => {
+        if (e.target.classList.contains('card-link')) return;
+        handleClick(opt.id, unit.id);
+      };
+      card.innerHTML = `
+        <div class="card-badge">${opt.badge}</div>
+        <div class="card-name">${opt.name}</div>
+        <div class="card-media">${opt.media}</div>
+        <div class="card-note">${opt.note}</div>
+        <div class="card-cue">${opt.cue}</div>
+        ${opt.page ? `<a class="card-link" href="${opt.page}">→ unit page</a>` : ''}
+      `;
+      col.appendChild(card);
+    });
+    row.appendChild(col);
+    if (i < UNITS.length - 1) {
+      const arrow = document.createElement('div');
+      arrow.className = 'arrow-spacer';
+      arrow.textContent = '→';
+      row.appendChild(arrow);
+    }
+  });
+}
+
+function buildTrajectories() {
+  const grid = document.getElementById('trajGrid');
+  PATHS.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'traj-card';
+    card.id = p.id;
+    card.onclick = () => selectPath(p);
+    card.innerHTML = `
+      <div class="traj-name">${p.name}</div>
+      <div class="traj-seq">${p.seq.replace(/\n/g,'<br>')}</div>
+      <div class="traj-why">${p.why}</div>
+      <div class="traj-cohort">${p.cohort}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function handleClick(oid, uid) {
+  activePath = null;
+  document.querySelectorAll('.traj-card').forEach(c => c.classList.remove('t-active'));
+  if (selected[uid] === oid) delete selected[uid];
+  else selected[uid] = oid;
+  updateDisplay();
+}
+
+function selectPath(p) {
+  if (activePath === p.id) { resetAll(); return; }
+  activePath = p.id;
+  selected = {};
+  p.ids.forEach(id => { const uid = id.split('-')[0]; selected[uid] = id; });
+  document.querySelectorAll('.traj-card').forEach(c => c.classList.remove('t-active'));
+  document.getElementById(p.id).classList.add('t-active');
+  updateDisplay();
+}
+
+function resetAll() {
+  selected = {}; activePath = null;
+  document.querySelectorAll('.traj-card').forEach(c => c.classList.remove('t-active'));
+  updateDisplay();
+}
+
+function updateDisplay() {
+  const selIds = new Set(Object.values(selected));
+  if (selIds.size === 0) {
+    document.querySelectorAll('.card').forEach(e => e.classList.remove('highlighted','dimmed'));
+    return;
+  }
+  const good = new Set(selIds);
+  selIds.forEach(sid => {
+    UNITS.forEach(u => u.opts.forEach(o => {
+      if (STRONG_PAIRS.has(sid+'+'+o.id) || STRONG_PAIRS.has(o.id+'+'+sid)) good.add(o.id);
+    }));
+  });
+  UNITS.forEach(u => u.opts.forEach(o => {
+    const el = document.getElementById(o.id);
+    if (!el) return;
+    el.classList.remove('highlighted','dimmed');
+    if (selIds.has(o.id)) el.classList.add('highlighted');
+    else if (!good.has(o.id)) el.classList.add('dimmed');
+  }));
+}
+
+buildFlow();
+buildTrajectories();
+</script>
+</body>
+</html>
