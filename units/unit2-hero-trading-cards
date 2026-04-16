@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2: Hero Trading Cards — ETHS Foundations Art</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-back" href="../index.html">← Curriculum Map</a>
+  <span class="nav-unit-label">Unit 2 of 7 · 10 classes</span>
+</nav>
+
+<div class="page-wrap">
+  <aside>
+    <div class="unit-num">Unit 2 · 10 classes</div>
+    <div class="unit-title-side">Hero Trading Cards</div>
+    <hr class="side-divider">
+    <div class="side-section-label">At a Glance</div>
+    <div class="meta-row"><span class="meta-label">Theme</span><span class="meta-value">Identity & Heroes</span></div>
+    <div class="meta-row"><span class="meta-label">Media</span><span class="meta-value">Colored Pencil</span></div>
+    <div class="meta-row"><span class="meta-label">Duration</span><span class="meta-value">10 classes</span></div>
+    <div class="meta-row"><span class="meta-label">Semester</span><span class="meta-value">Fall · late Sept</span></div>
+    <div class="meta-row"><span class="meta-label">Follows</span><span class="meta-value">Unit 1: Reference</span></div>
+    <hr class="side-divider">
+    <div class="side-section-label">On This Page</div>
+    <div class="side-nav">
+      <a href="#overview">Overview</a>
+      <a href="#questions">Essential Questions</a>
+      <a href="#standards">Standards</a>
+      <a href="#color-theory">Color Theory Content</a>
+      <a href="#phases">Phase Structure</a>
+      <a href="#days">Day by Day</a>
+      <a href="#udl">UDL Supports</a>
+      <a href="#prep">Teacher Prep</a>
+    </div>
+    <a class="canva-link" href="https://www.canva.com/design/DAGodaQISgc/view" target="_blank">→ Open Canva Slide Deck</a>
+  </aside>
+
+  <article>
+
+    <div class="content-section" id="overview">
+      <div class="section-eyebrow">Overview</div>
+      <div class="section-title">Who do you come from?</div>
+      <p>Students design a trading card featuring a personal hero — a family member, community figure, historical person, or anyone who has shaped who they are. This unit introduces colored pencil as a medium and color theory as a formal discipline, while staying rooted in the personal. The format constraint (trading card anatomy: character, stats, abilities, frame) comes before stylization, so every design decision students make is working toward a known destination.</p>
+      <p>This is the first unit where students are working in full color. The three-photo constraint from Unit 1 continues here, applied to reference gathering for the hero portrait. Students should finish the unit with a completed card and a felt understanding of how color relationships work — not just the vocabulary for them.</p>
+      <div class="note-box">
+        <div class="note-box-label">Structural Principle</div>
+        <p><strong>Format before stylization.</strong> Students learn what a trading card looks like — its compositional anatomy, its stats structure, its character-as-focal-point rule — before they start making stylization decisions. This prevents the common problem of students drawing a portrait and then trying to retrofit trading card elements around it. The destination is established first; the journey is more purposeful.</p>
+      </div>
+    </div>
+
+    <div class="content-section" id="questions">
+      <div class="section-eyebrow">Essential Questions</div>
+      <div class="section-title">Questions That Drive the Unit</div>
+      <div class="eq-list">
+        <div class="eq-item">Who do you come from?</div>
+        <div class="eq-item">How do artists use color to communicate feeling, personality, and meaning — not just appearance?</div>
+        <div class="eq-item">What decisions does a character designer make, and how do pose, expression, symbols, and composition work together?</div>
+        <div class="eq-item">How does working within a format constraint change the way you make artistic decisions?</div>
+        <div class="eq-item">How have different cultures developed distinct visual languages through color and pattern?</div>
+      </div>
+    </div>
+
+    <div class="content-section" id="standards">
+      <div class="section-eyebrow">Standards</div>
+      <div class="section-title">National Core Arts Standards</div>
+      <div class="standards-list">
+        <div class="standard-item">
+          <div class="std-code">VA:Cr1.2.Ia</div>
+          <div class="std-text">Shape an artistic investigation using a variety of approaches — students explore multiple layout thumbnails and character poses before committing.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cr2.1.Ia</div>
+          <div class="std-text">Engage in making a work of art without having a preconceived plan — color theory warm-ups precede the final card so students discover relationships before applying them.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Pr6.1.Ia</div>
+          <div class="std-text">Analyze and describe the impact that an exhibition has on personal awareness of social, cultural, or political beliefs — addressed through the card share/gallery and reflection on whose heroes get made visible.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Re8.1.Ia</div>
+          <div class="std-text">Interpret an artwork based on understanding the work in its context — used when examining trading card design exemplars and cultural pattern traditions.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cn11.1.Ia</div>
+          <div class="std-text">Describe how knowledge of culture, traditions, and history may influence personal responses to art — students research cultural pattern traditions and choose one to inform their card's background design.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="color-theory">
+      <div class="section-eyebrow">Color Theory Content</div>
+      <div class="section-title">What Students Learn About Color</div>
+      <p>Color theory enters here not as a vocabulary list but as a set of tools for making decisions. Students learn each relationship through a hands-on warm-up with colored pencils before they apply it to their card. The sequence moves from simpler relationships (complementary) to more nuanced ones (split-complementary, warm/cool contrast) across the first four studio days.</p>
+      <div class="color-theory-grid">
+        <div class="color-card">
+          <div class="color-card-swatch" style="background: linear-gradient(90deg, #e63946 50%, #2a9d8f 50%);"></div>
+          <div class="color-card-name">Complementary</div>
+          <div class="color-card-desc">Opposites on the color wheel. High contrast, vibrating energy when placed together. Creates visual punch — use for focal points.</div>
+        </div>
+        <div class="color-card">
+          <div class="color-card-swatch" style="background: linear-gradient(90deg, #e76f51 33%, #f4a261 33%, #f4a261 66%, #e9c46a 66%);"></div>
+          <div class="color-card-name">Analogous</div>
+          <div class="color-card-desc">Neighbors on the color wheel. Harmonious and unified — good for backgrounds and areas that should recede. Less tension than complementary.</div>
+        </div>
+        <div class="color-card">
+          <div class="color-card-swatch" style="background: linear-gradient(90deg, #e63946 33%, #457b9d 33%, #457b9d 66%, #1d3557 66%);"></div>
+          <div class="color-card-name">Warm / Cool Contrast</div>
+          <div class="color-card-desc">Warm colors advance; cool colors recede. Separating the hero (warm) from the background (cool) is the most reliable way to establish a focal point.</div>
+        </div>
+        <div class="color-card">
+          <div class="color-card-swatch" style="background: linear-gradient(90deg, #e63946 33%, #2d6a4f 33%, #2d6a4f 66%, #9b2226 66%);"></div>
+          <div class="color-card-name">Split-Complementary</div>
+          <div class="color-card-desc">One color plus the two colors on either side of its complement. More visual interest than complementary, less tension. Good for students who want complexity without chaos.</div>
+        </div>
+        <div class="color-card">
+          <div class="color-card-swatch" style="background: linear-gradient(180deg, #264653, #2a9d8f, #e9c46a, #f4a261, #e76f51);"></div>
+          <div class="color-card-name">Value in Colored Pencil</div>
+          <div class="color-card-desc">Light pressure builds up slowly. Start with the lightest color, add darker layers. Circular motion, sharp point. Smooth layering is the technical goal of this unit.</div>
+        </div>
+        <div class="color-card">
+          <div class="color-card-swatch" style="background: linear-gradient(90deg, #6a0572 25%, #c77dff 50%, #e0aaff 75%, #fff 100%);"></div>
+          <div class="color-card-name">Tint, Tone, Shade</div>
+          <div class="color-card-desc">Tint = color + white. Tone = color + grey. Shade = color + black. In colored pencil: building tone means layering the complement (cool colors tone warm, and vice versa).</div>
+        </div>
+      </div>
+      <div class="note-box" style="margin-top: 16px;">
+        <div class="note-box-label">Colored Pencil Technique — Core Norms</div>
+        <p>Light pressure in a circular motion. Always apply the lighter/cooler color first. Keep the pencil point sharp. Build value slowly across multiple layers — rushing produces blotchy, flat results. The goal is soft, smooth transitions. Students who "scribble" with heavy pressure are told to restart on a fresh patch — the muscle memory matters.</p>
+        <p><strong>Materials note:</strong> These are college-level colored pencils ($300/box). Breaking a pencil results in losing access for the project. A second break caps the maximum grade at 75%. Three breaks in a class period switches the whole class back to standard pencils. Tell students why these materials are what they are before they touch them.</p>
+      </div>
+    </div>
+
+    <div class="content-section" id="phases">
+      <div class="section-eyebrow">Phase Structure</div>
+      <div class="section-title">Three Phases</div>
+      <div class="phases">
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 1</span>
+            <span class="phase-name">Format — What is a trading card?</span>
+            <span class="phase-classes">Days 1–2</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Students analyze existing trading cards (Pokémon, Yu-Gi-Oh!, sports cards, artist trading cards) before they touch their own paper. The goal is to reverse-engineer the format: what are the consistent elements, how is emphasis established, what makes the character the focal point even when surrounded by stats and frames?</p>
+            <p>Students then choose their hero and begin planning their card stats. Stats must total 35 or less, with no single stat above 10. This constraint is not arbitrary — it forces students to think about who their hero actually is rather than maxing everything out. What are they strong in? Where are they more human?</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 2</span>
+            <span class="phase-name">Hero & Color — Character design + color theory introduction</span>
+            <span class="phase-classes">Days 3–6</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Character design principles introduced through visual examples: pose, expression, symbolic objects, and composition. Students learn how pose communicates personality without words — and choose the crop (close-up, medium shot, or full figure) that best suits their hero. Illustrative style vs. realistic style is examined; students are explicitly encouraged toward illustrative since it suits colored pencil better and removes the pressure of photographic accuracy.</p>
+            <p>Color theory warm-ups happen at the start of Days 3–6 — short, focused, one relationship per day. Students make a small patch of color using the day's concept before transitioning to their card sketch. Cultural pattern research begins on Day 5: students identify a pattern tradition that connects to them or to their hero and begin integrating it into the card's background design.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 3</span>
+            <span class="phase-name">Execution — Colored pencil application and completion</span>
+            <span class="phase-classes">Days 7–10</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Full studio days. Students apply colored pencil to their final card using the layering techniques from the warm-ups. Teacher circulates with the same question from Unit 1: "What decision are you making here, and why?" Assessment criteria were built with students at the end of Day 6 — students reference the co-created list during studio time.</p>
+            <p>Day 10 is completion and a brief gallery share. Students leave two responses on sticky notes: one for a card where they notice a strong color decision, one for a card where they want to ask the artist something. Cards go into binders. The essential question — "Who do you come from?" — is the subject of a short written reflection.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-section" id="days">
+      <div class="section-eyebrow">Day by Day</div>
+      <div class="section-title">Lesson Summaries</div>
+      <div class="days">
+
+        <div class="day-row">
+          <div class="day-label">Day 1</div>
+          <div class="day-content">
+            <div class="day-title">Trading card anatomy — what makes this format work?</div>
+            <div class="day-desc">Spread a range of trading cards across tables before students arrive. No instructions — just "look at these." Students do a quick See/Think/Wonder, then break into pairs to reverse-engineer the format: what are the consistent elements, what's always the focal point, what can change? Class builds a shared anatomy map. Do Now: who is someone in your life who deserves a trading card? Write it on a sticky note — don't overthink it.</div>
+            <div class="day-timing">
+              <span>0–7 min: 36 Squares bell ringer</span>
+              <span>7–18 min: See/Think/Wonder with card spread</span>
+              <span>18–32 min: pairs reverse-engineer the format</span>
+              <span>32–42 min: class builds shared anatomy map</span>
+              <span>42–45 min: sticky note hero brainstorm</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 2</div>
+          <div class="day-content">
+            <div class="day-title">Choosing your hero + stats planning</div>
+            <div class="day-desc">Students settle on their hero. Discussion: who counts? Family, community leaders, historical figures, activists, artists, people who showed courage quietly. The definition is deliberately wide. Students then build their hero's stats profile — 4–6 stats of their choosing, totaling no more than 35, no single stat above 10. This is more interesting than it sounds: deciding that your grandmother's Patience is 9 and her Stubbornness is also 9 is a form of character analysis. Begin three thumbnail sketches for card layout.</div>
+            <div class="day-timing">
+              <span>0–5 min: sketchbook prompt — describe your hero in three words that aren't their job</span>
+              <span>5–18 min: who counts? — whole class discussion</span>
+              <span>18–30 min: stats planning (packet)</span>
+              <span>30–45 min: three thumbnail layouts in sketchbook</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 3</div>
+          <div class="day-content">
+            <div class="day-title">Character design — pose, expression, symbols, crop</div>
+            <div class="day-desc">Color theory warm-up: complementary pairs (5 min patch exercise). Then: character design principles through visual examples. How does pose communicate personality without words? What objects would surround your hero — what do they carry, what do they wear, what's in their environment? Students choose their crop. Begin three character sketches: close-up, medium, and full figure. Reference library available — three-photo constraint applies to the portrait reference gathering.</div>
+            <div class="day-timing">
+              <span>0–5 min: complementary color patch warm-up</span>
+              <span>5–22 min: character design slide deck + discussion</span>
+              <span>22–43 min: three character sketches (close-up, medium, full)</span>
+              <span>43–45 min: choose your crop — commit to one</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 4</div>
+          <div class="day-content">
+            <div class="day-title">Illustrative vs. realistic — color warm-up: analogous</div>
+            <div class="day-desc">Warm-up: analogous color patch. Then examine illustrative vs. realistic portraiture — why illustrative suits this project better, and how simplification is a skill not a shortcut. Students refine their chosen character sketch into a cleaner drawing. Begin transferring to the 5×7 card format. Colored pencil material norms introduced before anyone touches them: origin of the pencils, cost, care protocols, consequences. Students handle the pencils for the first time during the warm-up.</div>
+            <div class="day-timing">
+              <span>0–8 min: analogous color warm-up</span>
+              <span>8–20 min: illustrative vs. realistic — examples and discussion</span>
+              <span>20–30 min: colored pencil norms + first touch</span>
+              <span>30–45 min: refine character sketch, begin transfer to card</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 5</div>
+          <div class="day-content">
+            <div class="day-title">Warm/cool contrast + cultural pattern research</div>
+            <div class="day-desc">Warm-up: warm/cool contrast patch — students try making a simple shape pop using temperature contrast alone, no line. Then: cultural pattern research begins. Show a range of pattern traditions (Islamic geometric, West African textile, Indigenous beadwork, Latin American folk art, Japanese mon, Scandinavian folk patterns, etc.) with context for each. Students choose one that connects to them, their hero, or their curiosity and begin sketching pattern variations for the card's background. No appropriation without attribution — discuss what it means to use a tradition with care.</div>
+            <div class="day-timing">
+              <span>0–8 min: warm/cool contrast warm-up</span>
+              <span>8–25 min: cultural pattern survey + discussion</span>
+              <span>25–43 min: pattern research + sketchbook variations</span>
+              <span>43–45 min: choose your pattern direction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 6</div>
+          <div class="day-content">
+            <div class="day-title">Split-complementary + co-create assessment criteria</div>
+            <div class="day-desc">Warm-up: split-complementary exploration. At the halfway point, stop and build assessment criteria with the class — what does a strong trading card look like? Students generate ideas, teacher organizes them into four or five observable criteria. These go on the board and stay there for the rest of the unit. Students then begin applying colored pencil to their card in earnest: character portrait first, background pattern second.</div>
+            <div class="day-timing">
+              <span>0–8 min: split-complementary warm-up</span>
+              <span>8–22 min: co-create assessment criteria</span>
+              <span>22–43 min: studio — begin colored pencil application</span>
+              <span>43–45 min: intention-setting: what will you finish by next class?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Days 7–9</div>
+          <div class="day-content">
+            <div class="day-title">Studio — colored pencil application</div>
+            <div class="day-desc">Full studio days. Teacher circulates: "What color decision are you making here?" Students reference the co-created criteria. Cards that show heavy scribble pressure get a quiet redirect — demonstrate correct technique on a scrap patch, then ask them to try again on a less visible section of the card. Sketchbook Do Now at the start of each day keeps momentum. Early finishers begin their Accordion Book card for whichever color term came up most naturally for them this unit.</div>
+            <div class="day-timing">
+              <span>0–5 min: sketchbook Do Now (intention-setting or visual prompt)</span>
+              <span>5–40 min: studio — colored pencil completion</span>
+              <span>40–45 min: self-assessment against co-created criteria</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 10</div>
+          <div class="day-content">
+            <div class="day-title">Completion, gallery, and reflection</div>
+            <div class="day-desc">Final studio time for anyone still completing (first 15–20 min). Cards posted for a gallery share. Students write two sticky notes: one for a card where they notice a strong color decision (name it specifically), one for a card where they have a genuine question for the artist. Brief whole-class share — whose hero did you meet today that you want to know more about? Reflection: "Who do you come from?" written response in sketchbook. Cards go into binders.</div>
+            <div class="day-timing">
+              <span>0–18 min: final studio time</span>
+              <span>18–32 min: gallery with two sticky notes</span>
+              <span>32–42 min: whole-class share — whose hero did we meet?</span>
+              <span>42–45 min: written reflection prompt in sketchbook</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-section" id="udl">
+      <div class="section-eyebrow">UDL Supports</div>
+      <div class="section-title">Universal Design Considerations</div>
+      <div class="udl-grid">
+        <div class="udl-card">
+          <div class="udl-card-label">Engagement</div>
+          <div class="udl-item">Hero definition is deliberately wide — family, historical, fictional, community, personal</div>
+          <div class="udl-item">Stats system creates a low-stakes analytical entry into the project for students who resist drawing</div>
+          <div class="udl-item">Cultural pattern choice is student-directed — connects to their own traditions or genuine curiosity</div>
+          <div class="udl-item">Co-created criteria on Day 6 means students understand and own the assessment standard</div>
+          <div class="udl-item">Gallery sticky notes create audience without the pressure of formal critique</div>
+        </div>
+        <div class="udl-card">
+          <div class="udl-card-label">Representation</div>
+          <div class="udl-item">Each color theory concept introduced through a hands-on warm-up before vocabulary is attached</div>
+          <div class="udl-item">Trading card anatomy built inductively from examples, not delivered as a definition</div>
+          <div class="udl-item">Pattern traditions presented with cultural context, not just visual reference</div>
+          <div class="udl-item">Illustrative vs. realistic distinction reduces the anxiety of "I can't draw faces"</div>
+          <div class="udl-item">Colored pencil technique demonstrated live + reference card available at each table</div>
+        </div>
+        <div class="udl-card">
+          <div class="udl-card-label">Action & Expression</div>
+          <div class="udl-item">Crop choice (close-up / medium / full figure) lets students work at different complexity levels</div>
+          <div class="udl-item">Stats and abilities language gives students who struggle visually a text-based entry point</div>
+          <div class="udl-item">Sketchbook Do Nows are low-stakes — can be written, sketched, or diagrammed</div>
+          <div class="udl-item">Accordion Book card (early finisher): student chooses which color term to represent and how</div>
+          <div class="udl-item">Reflection prompt can be answered in writing, sketching, or a visual map</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="prep">
+      <div class="section-eyebrow">Teacher Prep</div>
+      <div class="section-title">Before the Unit Starts</div>
+      <div class="checklist" id="prepList">
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Collect 20–30 physical trading cards across types (Pokémon, Yu-Gi-Oh!, sports, artist trading cards) for Day 1 card spread</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare stats planning packet (hero name, 4–6 stats labels of student's choosing, max 35 total, max 10 per stat, one special ability)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Cut 5×7 card-weight paper or acquire card blanks for final execution</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare colored pencil sets — count them before and after each class, note any breakage immediately</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare small practice paper patches for warm-up exercises (Days 3–6)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Build cultural pattern reference slide or printed sheet — at least 8 traditions with brief context for each</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare colored pencil technique reference card (one per table): circular motion, sharp point, light layers, cooler color first)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Review Canva slide deck — character design section has most of the visual content for Days 3–4</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare sticky notes for Day 1 hero brainstorm and Day 10 gallery</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Set up reference library from Unit 1 — students will need it again for three-photo portrait reference</span></div>
+      </div>
+
+      <div class="note-box" style="margin-top: 24px;">
+        <div class="note-box-label">Watch For</div>
+        <p><strong>Students choosing celebrities or fictional characters:</strong> Redirect gently — "what is it about them that you admire? Could you find that quality in someone you actually know?" Fictional characters are allowed but discouraged without a strong rationale.</p>
+        <p><strong>Heavy scribble pressure:</strong> The most common colored pencil mistake. Catch it early on Day 4 before it becomes a habit. Have a scrap patch available at every table so redirection is easy.</p>
+        <p><strong>Pattern as decoration vs. pattern as meaning:</strong> Push students to choose a pattern tradition that has some connection — to their hero, their background, or a genuine curiosity — rather than picking whichever looks coolest.</p>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<script>
+function togglePhase(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector('.phase-toggle');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+  header.classList.toggle('is-open', !isOpen);
+}
+function toggleCheck(box) {
+  box.classList.toggle('checked');
+  box.textContent = box.classList.contains('checked') ? '✓' : '';
+}
+</script>
+</body>
+</html>
