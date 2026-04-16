@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1: Reference — ETHS Foundations Art</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #1e4620;
+    --green-mid: #2C5F2E;
+    --green-light: #D4E8D4;
+    --cream: #f7f4ef;
+    --ink: #1a1a18;
+    --ink-muted: #5a5a54;
+    --ink-faint: #9a9a90;
+    --border: rgba(26,26,24,0.12);
+    --border-strong: rgba(26,26,24,0.22);
+    --accent: #2C5F2E;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    border-bottom: 1px solid var(--border-strong);
+    padding: 0 40px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    z-index: 100;
+  }
+  .nav-back {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: color 0.12s;
+  }
+  .nav-back:hover { color: var(--ink); }
+  .nav-unit-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+  }
+
+  /* LAYOUT */
+  .page-wrap {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: calc(100vh - 56px);
+  }
+
+  /* SIDEBAR */
+  aside {
+    border-right: 1px solid var(--border);
+    padding: 36px 28px;
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+  }
+  .unit-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 8px;
+  }
+  .unit-title-side {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .side-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 18px 0;
+  }
+  .side-section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 7px;
+  }
+  .meta-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+  }
+  .meta-value {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .side-nav a {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+    text-decoration: none;
+    padding: 5px 0;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    margin-left: -10px;
+    transition: all 0.12s;
+    line-height: 1.4;
+  }
+  .side-nav a:hover {
+    color: var(--ink);
+    border-left-color: var(--green-mid);
+  }
+  .canva-link {
+    display: block;
+    margin-top: 20px;
+    padding: 9px 12px;
+    background: var(--green-mid);
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.12s;
+  }
+  .canva-link:hover { background: var(--green-dark); }
+
+  /* MAIN CONTENT */
+  article {
+    padding: 48px 56px 80px;
+    max-width: 820px;
+  }
+
+  /* SECTION */
+  .content-section { margin-bottom: 56px; }
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  p {
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.72;
+    margin-bottom: 12px;
+  }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 500; color: var(--ink); }
+
+  /* ESSENTIAL QUESTIONS */
+  .eq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .eq-item {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--green-dark);
+    padding: 12px 16px;
+    border-left: 3px solid var(--green-mid);
+    background: #fff;
+    border-radius: 0 5px 5px 0;
+    line-height: 1.4;
+  }
+
+  /* STANDARDS */
+  .standards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .standard-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .std-code {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: var(--green-mid);
+    font-weight: 500;
+    padding-top: 1px;
+    line-height: 1.5;
+  }
+  .std-text { color: var(--ink-muted); line-height: 1.5; font-size: 12px; }
+
+  /* PHASES */
+  .phases { display: flex; flex-direction: column; gap: 10px; }
+  .phase {
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+  }
+  .phase-header:hover { background: rgba(0,0,0,0.02); }
+  .phase-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    width: 52px;
+    flex-shrink: 0;
+  }
+  .phase-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    flex: 1;
+  }
+  .phase-classes {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+  }
+  .phase-toggle { font-size: 12px; color: var(--ink-faint); transition: transform 0.15s; }
+  .phase-toggle.open { transform: rotate(90deg); }
+  .phase-body { padding: 0 16px; overflow: hidden; max-height: 0; transition: max-height 0.25s ease, padding 0.25s; }
+  .phase-body.open { max-height: 2000px; padding: 16px; }
+
+  /* DAY ROWS */
+  .days { display: flex; flex-direction: column; gap: 0; }
+  .day-row {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .day-row:last-child { border-bottom: none; }
+  .day-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    padding-top: 2px;
+    text-transform: uppercase;
+  }
+  .day-content {}
+  .day-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .day-desc { font-size: 12px; color: var(--ink-muted); line-height: 1.55; margin-bottom: 6px; }
+  .day-timing {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+  .day-timing span {
+    display: inline-block;
+    background: rgba(0,0,0,0.04);
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin: 2px 2px 2px 0;
+  }
+  .day-principles {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .principle-card {
+    background: var(--green-light);
+    border-left: 3px solid var(--green-mid);
+    border-radius: 0 4px 4px 0;
+    padding: 7px 10px;
+  }
+  .principle-title { font-size: 11px; font-weight: 500; color: var(--green-dark); margin-bottom: 2px; }
+  .principle-body { font-size: 10px; color: var(--green-dark); line-height: 1.45; opacity: 0.85; }
+
+  /* TAGS */
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-muted);
+    background: #fff;
+  }
+  .tag.green { background: var(--green-light); color: var(--green-dark); border-color: transparent; }
+
+  /* CHECKLIST */
+  .checklist { display: flex; flex-direction: column; gap: 6px; }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+  .check-box {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--border-strong);
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: background 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .check-box.checked {
+    background: var(--green-mid);
+    border-color: var(--green-mid);
+    color: #fff;
+    font-size: 10px;
+  }
+
+  /* UDL GRID */
+  .udl-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .udl-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 14px;
+  }
+  .udl-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 8px;
+  }
+  .udl-item {
+    font-size: 11px;
+    color: var(--ink-muted);
+    padding: 3px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.45;
+  }
+  .udl-item:last-child { border-bottom: none; }
+
+  /* NOTE BOX */
+  .note-box {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green-mid);
+    border-radius: 0 6px 6px 0;
+    padding: 14px 16px;
+    margin-top: 12px;
+  }
+  .note-box-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 6px;
+  }
+  .note-box p { font-size: 12px; color: var(--ink-muted); margin-bottom: 6px; }
+
+  @media (max-width: 800px) {
+    .page-wrap { grid-template-columns: 1fr; }
+    aside { position: static; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
+    article { padding: 32px 24px 60px; }
+    .udl-grid { grid-template-columns: 1fr; }
+    nav, .page-wrap { padding-left: 0; }
+    nav { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-back" href="../index.html">← Curriculum Map</a>
+  <span class="nav-unit-label">Unit 1 of 7 · 6 classes</span>
+</nav>
+
+<div class="page-wrap">
+  <aside>
+    <div class="unit-num">Unit 1 · 6 classes</div>
+    <div class="unit-title-side">Understanding Reference</div>
+    <hr class="side-divider">
+    <div class="side-section-label">At a Glance</div>
+    <div class="meta-row"><span class="meta-label">Theme</span><span class="meta-value">Learning to See</span></div>
+    <div class="meta-row"><span class="meta-label">Media</span><span class="meta-value">Drawing</span></div>
+    <div class="meta-row"><span class="meta-label">Duration</span><span class="meta-value">6 classes</span></div>
+    <div class="meta-row"><span class="meta-label">Semester</span><span class="meta-value">Fall · early Sept</span></div>
+    <hr class="side-divider">
+    <div class="side-section-label">On This Page</div>
+    <div class="side-nav">
+      <a href="#overview">Overview</a>
+      <a href="#questions">Essential Questions</a>
+      <a href="#standards">Standards</a>
+      <a href="#phases">Phase Structure</a>
+      <a href="#days">Day by Day</a>
+      <a href="#udl">UDL Supports</a>
+      <a href="#prep">Teacher Prep</a>
+    </div>
+    <a class="canva-link" href="https://www.canva.com/design/DAHByEggJWk/view" target="_blank">→ Open Canva Slide Deck</a>
+  </aside>
+
+  <article>
+
+    <div class="content-section" id="overview">
+      <div class="section-eyebrow">Overview</div>
+      <div class="section-title">How do artists get ideas?</div>
+      <p>This unit opens the year by establishing how artists actually use reference images — not as something to copy, but as raw material for decision-making. Students discover the difference between copying and using reference through inquiry rather than lecture, then apply the three-photo constraint to make an original drawing.</p>
+      <p>This unit doubles as a <strong>baseline read for the teacher</strong>: what students choose from the reference library and how they work tells you almost as much as what they make. It also launches the <strong>Accordion Book</strong>, which will be built across the year as vocabulary emerges in context — not front-loaded here.</p>
+      <div class="note-box">
+        <div class="note-box-label">Guiding Question</div>
+        <p style="font-family:'DM Serif Display',serif;font-size:18px;font-style:italic;color:var(--ink);">"What is art that is REALLY yours?"</p>
+      </div>
+      <div style="margin-top:16px">
+        <div class="side-section-label" style="margin-bottom:8px">Key Principles Established Here</div>
+        <div class="day-principles">
+          <div class="principle-card">
+            <div class="principle-title">Principle 1 — Reference is for inspiration, not reproduction</div>
+            <div class="principle-body">Artists use reference to solve problems, not to replicate. The thinking is yours even when the information isn't.</div>
+          </div>
+          <div class="principle-card">
+            <div class="principle-title">Principle 2 — For original work, use photographs, not existing artwork</div>
+            <div class="principle-body">A photo gives you information. Someone else's artwork gives you someone else's decisions. Learn to tell the difference.</div>
+          </div>
+          <div class="principle-card">
+            <div class="principle-title">Principle 3 — Copying is legitimate only as a declared master copy</div>
+            <div class="principle-body">Copying to learn technique is a legitimate art practice. Copying and presenting as original is not. Both exist; label them accordingly.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="questions">
+      <div class="section-eyebrow">Essential Questions</div>
+      <div class="section-title">Questions That Drive the Unit</div>
+      <div class="eq-list">
+        <div class="eq-item">What is art that is really yours?</div>
+        <div class="eq-item">What decisions does an artist make when using a reference, and where do those decisions come from?</div>
+        <div class="eq-item">What is the difference between learning from existing art and copying it?</div>
+        <div class="eq-item">How do you take information from three sources and synthesize something new?</div>
+      </div>
+    </div>
+
+    <div class="content-section" id="standards">
+      <div class="section-eyebrow">Standards</div>
+      <div class="section-title">National Core Arts Standards</div>
+      <div class="standards-list">
+        <div class="standard-item">
+          <div class="std-code">VA:Cr2.1.Ia</div>
+          <div class="std-text">Engage in making a work of art without having a preconceived plan — investigated here through the 3-photo synthesis constraint.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cr3.1.Ia</div>
+          <div class="std-text">Apply relevant criteria to examine, reflect on, and plan revisions — addressed through the Now I Think exit ticket and intentional-change tracking.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Re8.1.Ia</div>
+          <div class="std-text">Interpret an artwork based on understanding the work in its context — introduced through the master copy vs. photo reference comparison.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cn10.1.Ia</div>
+          <div class="std-text">Document the process of developing ideas from early stages to fully elaborated ideas — students track their three intentional changes on a sticky note throughout studio time.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="phases">
+      <div class="section-eyebrow">Phase Structure</div>
+      <div class="section-title">Three Phases</div>
+      <div class="phases">
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 1</span>
+            <span class="phase-name">Investigation — What counts as reference?</span>
+            <span class="phase-classes">Days 1–2</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Students encounter the core question before receiving any definitions. Day 1 uses student work from the previous folklore unit as case studies — two drawings, two different sources, visibly different levels of artistic ownership. Students analyze them before the teacher names anything. The three principles are built collectively at the start of Day 2, not delivered.</p>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 2</span>
+            <span class="phase-name">Constraint — The three-photo drawing</span>
+            <span class="phase-classes">Days 2–5</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Students choose one photo from the reference library on Day 2 and begin a pencil sketch with the constraint: make at least 3 intentional changes from what you see, tracked on a sticky note. Days 3–5 are studio time. Work is kept small this year — a deliberate shift from last year's very large format. Three photos synthesized into one is the constraint that makes copying structurally impossible.</p>
+            <div class="note-box" style="margin-top:12px">
+              <div class="note-box-label">Three-Photo Constraint</div>
+              <p>Requiring students to incorporate elements from three different reference images rather than choosing one makes copying structurally impossible and tends to produce stronger, more inventive results. Confirm as a keeper for all future units involving reference work.</p>
+            </div>
+          </div>
+        </div>
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 3</span>
+            <span class="phase-name">Reflection — Now I Think</span>
+            <span class="phase-classes">Day 6</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Students complete a Now I Think exit card (Project Zero routine) comparing their understanding of "using reference" from Day 1 to the end of the unit. Finished drawings shared in a brief gallery walk — low stakes, no formal critique. Teacher reads the room: what did students choose, what did they change, what does the work reveal about skill baseline?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="days">
+      <div class="section-eyebrow">Day by Day</div>
+      <div class="section-title">Lesson Summaries</div>
+      <div class="days">
+
+        <div class="day-row">
+          <div class="day-label">Day 1</div>
+          <div class="day-content">
+            <div class="day-title">What did the artist take from the photo?</div>
+            <div class="day-desc">Open with the incomplete sentence: <em>"Using a reference image in art means…"</em> — students write silently, no sharing yet. Show two student drawings side by side with their source images (from the previous year's folklore project). Students use See/Think/Wonder on the pair: what did each artist take, what did they change, which feels more like the artist's own work? Close with the Now I Think setup — students flip their sticky note and write a revised sentence. Stick to the board on the way out.</div>
+            <div class="day-timing">
+              <span>0–5 min: sentence prompt (silent write)</span>
+              <span>5–20 min: look at the two student examples — See/Think/Wonder</span>
+              <span>20–35 min: your turn — combine three references into one piece, any media</span>
+              <span>35–43 min: Now I Think exit ticket</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 2</div>
+          <div class="day-content">
+            <div class="day-title">Reference in the Wild — master copy vs. photo reference</div>
+            <div class="day-desc">Build the three principles together as a class — slides are blank, filled in as students generate the ideas. Then establish the distinction between a master copy (learning technical skills by reproducing another artist's solved problem) and photo reference (using a photograph as raw material for conceptual decisions). Discuss: does drawing a cartoon character count as a master copy? Not always — show the difference between original work based on a character and a true copy. Credit conventions introduced here. Students then enter the reference library, choose one photo, and begin a pencil sketch with the 3-intentional-changes constraint. Track changes on a sticky note.</div>
+            <div class="day-timing">
+              <span>0–12 min: build the three principles together</span>
+              <span>12–22 min: master copy vs. photo reference — examples and distinction</span>
+              <span>22–30 min: credit conventions — "based on the work of [artist]"</span>
+              <span>30–43 min: browse reference library, choose photo, begin pencil sketch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Days 3–4</div>
+          <div class="day-content">
+            <div class="day-title">Studio — Pencil sketch development</div>
+            <div class="day-desc">Full studio days. Students continue their drawing, incorporating elements from their chosen references. Teacher circulates: "What did you change? Why?" — redirecting the question back to the student's decision-making rather than evaluating the product. Skill Builders available for early finishers (Accordion Book cards begin here for any student who surfaces an element or principle naturally — teacher names it in the moment and the card gets made).</div>
+            <div class="day-timing">
+              <span>0–5 min: 36 Squares bell ringer or sketchbook prompt</span>
+              <span>5–40 min: studio — drawing development</span>
+              <span>40–45 min: sticky note update — add or revise the 3 intentional changes</span>
+            </div>
+            <div class="note-box" style="margin-top:10px">
+              <div class="note-box-label">Teacher Observation</div>
+              <p>This is your baseline read. What students choose from the library (architectural detail vs. animal vs. human figure vs. texture) tells you something before they've picked up a pencil. Note who is hesitant to commit, who goes immediately, who needs permission to deviate from the reference, who invents freely.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 5</div>
+          <div class="day-content">
+            <div class="day-title">Studio — Completion and synthesis</div>
+            <div class="day-desc">Final studio day. Drawing should feel complete by end of class. Students finalize their sticky note: what three intentional changes did you make, and why? If work is genuinely unfinished, students can identify one specific thing they would do next — this becomes the basis for a brief written intention rather than a grade penalty.</div>
+            <div class="day-timing">
+              <span>0–5 min: 36 Squares bell ringer</span>
+              <span>5–38 min: studio — complete the drawing</span>
+              <span>38–45 min: finalize sticky note — 3 changes + rationale</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 6</div>
+          <div class="day-content">
+            <div class="day-title">Gallery walk and Now I Think reflection</div>
+            <div class="day-desc">Drawings posted around the room. Silent gallery walk (5–7 min) — students leave a dot sticker on one drawing where they see a strong decision (not necessarily the "best" drawing). Whole-group share: what decisions did you notice? Where do you see the artist's voice? Close with the Now I Think card: <em>"I used to think using reference meant… now I think it means…"</em> Students keep the card — it goes into the Accordion Book as the first entry if they want it.</div>
+            <div class="day-timing">
+              <span>0–5 min: set up gallery, review gallery walk norms</span>
+              <span>5–15 min: silent gallery walk with dot stickers</span>
+              <span>15–28 min: whole-group share — what decisions did you see?</span>
+              <span>28–42 min: Now I Think written reflection</span>
+              <span>42–45 min: introduce Accordion Book — this card can be your first entry</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-section" id="udl">
+      <div class="section-eyebrow">UDL Supports</div>
+      <div class="section-title">Universal Design Considerations</div>
+      <div class="udl-grid">
+        <div class="udl-card">
+          <div class="udl-card-label">Engagement</div>
+          <div class="udl-item">Reference library offers ~400 printed photos across categories — student chooses what interests them</div>
+          <div class="udl-item">Sentence prompt before any definitions: entry point for all students regardless of prior knowledge</div>
+          <div class="udl-item">Master copy option named and legitimized — reduces anxiety about copying</div>
+          <div class="udl-item">Low-stakes first assessment: gallery walk with dot stickers, not rubric evaluation</div>
+        </div>
+        <div class="udl-card">
+          <div class="udl-card-label">Representation</div>
+          <div class="udl-item">Principles built collectively — students see their own thinking become the content</div>
+          <div class="udl-item">Visual examples (student work + sources) before any verbal explanation</div>
+          <div class="udl-item">See/Think/Wonder provides structured language for looking</div>
+          <div class="udl-item">Sticky note tracking externalizes the decision-making process</div>
+        </div>
+        <div class="udl-card">
+          <div class="udl-card-label">Action & Expression</div>
+          <div class="udl-item">Day 1: any media available — reveals preference without pressure</div>
+          <div class="udl-item">Days 3–5: pencil drawing only — levels the field for a baseline read</div>
+          <div class="udl-item">Reflection options: Now I Think card can be written, drawn, or annotated with images</div>
+          <div class="udl-item">Accordion Book card: optional first entry, student decides format</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="prep">
+      <div class="section-eyebrow">Teacher Prep</div>
+      <div class="section-title">Before the Unit Starts</div>
+      <div class="checklist" id="prepList">
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Print reference library photos (400+) — landscape, animals, objects, architecture, people, texture, food, nature, still life — laminated or in clear sleeves</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Select two student examples from previous year's folklore project with their source images — one that stayed close to source, one that diverged significantly</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare Day 1 slides — sentence prompt, student example pair, blank principles slides for Day 2</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Cut sticky notes for exit tickets (Now I Think — before side, then flip for after)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Set up reference library display — accessible, browsable, organized loosely by category (not so organized it feels like a catalog)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prep drawing pencils and paper — smaller format than last year (approx. 9x12 or smaller)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare dot stickers for gallery walk (Day 6)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Have Accordion Book materials ready for Day 6 introduction</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Review Canva slide deck before Day 1 — slides load slowly in some browsers</span></div>
+      </div>
+
+      <div class="note-box" style="margin-top:24px">
+        <div class="note-box-label">No Vocabulary to Front-Load</div>
+        <p>This unit deliberately withholds elements and principles vocabulary. If a term comes up naturally in conversation — a student calls something a "value" or mentions "contrast" — name it in the moment and note it. The Accordion Book card for that term gets made then, not before. The unit's job is decision-making, not vocabulary acquisition.</p>
+      </div>
+
+      <div class="note-box" style="margin-top:12px">
+        <div class="note-box-label">What to Watch For (Baseline Read)</div>
+        <p><strong>Reference choice:</strong> architectural detail / human figure / animal / texture / food / abstract. Note patterns by class section.</p>
+        <p><strong>Approach to the constraint:</strong> Who needs permission to deviate from the reference? Who invents freely without being asked? Who struggles to synthesize across three images?</p>
+        <p><strong>Line confidence:</strong> Hesitant / committed / heavy-handed / expressive. This is your drawing baseline for the year.</p>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<script>
+function togglePhase(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector('.phase-toggle');
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+}
+
+function toggleCheck(box) {
+  box.classList.toggle('checked');
+  if (box.classList.contains('checked')) box.textContent = '✓';
+  else box.textContent = '';
+}
+</script>
+</body>
+</html>
