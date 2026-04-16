@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3: Folklore Etching — ETHS Foundations Art</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+  .waitsgiving-box {
+    background: #1a1a18;
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-top: 14px;
+  }
+  .waitsgiving-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 10px;
+  }
+  .waitsgiving-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .waitsgiving-songs { display: flex; flex-direction: column; gap: 8px; }
+  .song-item {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 8px;
+  }
+  .song-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 3px;
+  }
+  .song-desc { font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+  .song-pattern {
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    font-style: italic;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    line-height: 1.5;
+  }
+
+  .technique-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .technique-card { background: #fff; border: 1px solid var(--border); border-radius: 7px; padding: 14px; }
+  .technique-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .technique-card.works .technique-card-label { color: var(--green-mid); }
+  .technique-card.doesnt .technique-card-label { color: #9a3a2a; }
+  .technique-item { font-size: 12px; color: var(--ink-mid); padding: 3px 0; border-bottom: 1px solid var(--border); line-height: 1.45; display: flex; gap: 7px; align-items: baseline; }
+  .technique-item:last-child { border-bottom: none; }
+  .ti-dot { flex-shrink: 0; font-size: 10px; }
+  .technique-card.works .ti-dot { color: var(--green-mid); }
+  .technique-card.doesnt .ti-dot { color: #9a3a2a; }
+
+  .artist-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .artist-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 12px; }
+  .artist-name { font-size: 12px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+  .artist-dates { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--ink-faint); margin-bottom: 6px; }
+  .artist-note { font-size: 11px; color: var(--ink-muted); line-height: 1.5; }
+
+  .printing-steps { display: flex; flex-direction: column; gap: 0; }
+  .print-step {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+  .print-step:last-child { border-bottom: none; }
+  .print-step-num {
+    width: 32px; height: 32px;
+    background: var(--green-mid);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .print-step-title { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+  .print-step-desc { font-size: 13px; color: var(--ink-mid); line-height: 1.6; }
+
+  @media (max-width: 700px) {
+    .technique-grid, .artist-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-back" href="../index.html">← Curriculum Map</a>
+  <span class="nav-unit-label">Unit 3 of 7 · 16 classes</span>
+</nav>
+
+<div class="page-wrap">
+  <aside>
+    <div class="unit-num">Unit 3 · 16 classes</div>
+    <div class="unit-title-side">Folklore Etching</div>
+    <hr class="side-divider">
+    <div class="side-section-label">At a Glance</div>
+    <div class="meta-row"><span class="meta-label">Theme</span><span class="meta-value">Folklore & Storytelling</span></div>
+    <div class="meta-row"><span class="meta-label">Media</span><span class="meta-value">Drypoint Printmaking</span></div>
+    <div class="meta-row"><span class="meta-label">Duration</span><span class="meta-value">16 classes</span></div>
+    <div class="meta-row"><span class="meta-label">Semester</span><span class="meta-value">Fall · Oct–Nov</span></div>
+    <div class="meta-row"><span class="meta-label">Follows</span><span class="meta-value">Unit 2: Trading Cards</span></div>
+    <hr class="side-divider">
+    <div class="side-section-label">On This Page</div>
+    <div class="side-nav">
+      <a href="#overview">Overview</a>
+      <a href="#waitsgiving">Waitsgiving Do Now Thread</a>
+      <a href="#questions">Essential Questions</a>
+      <a href="#standards">Standards</a>
+      <a href="#technique">Drypoint Technique</a>
+      <a href="#artists">Artist Exemplars</a>
+      <a href="#phases">Phase Structure</a>
+      <a href="#days">Day by Day</a>
+      <a href="#printing">Printing Process</a>
+      <a href="#udl">UDL Supports</a>
+      <a href="#prep">Teacher Prep</a>
+    </div>
+    <a class="canva-link" href="https://www.canva.com/design/DAG-x_FDM9M/view" target="_blank">→ Open Canva Slide Deck</a>
+  </aside>
+
+  <article>
+
+    <div class="content-section" id="overview">
+      <div class="section-eyebrow">Overview</div>
+      <div class="section-title">Whose stories get carried forward?</div>
+      <p>This is the longest and most technically ambitious unit of the year. Students research folklore from their own communities — through peer interviews, community mapping, and personal memory — and then translate a chosen story into a drypoint etching. The unit is rooted in oral history as a legitimate and often marginalized form of knowledge, and treats students as both bearers and preservers of living tradition.</p>
+      <p>Drypoint printmaking is introduced as a medium that rewards deliberate mark-making: unlike drawing, you can't erase, you can't blend, and you can't fill solid areas. Every value must be built through line density and direction. This constraint is a feature, not a limitation — it teaches students to <strong>think in marks</strong> before they commit them.</p>
+      <p>The unit also carries the <strong>Waitsgiving Do Now thread</strong> — a recurring narrative told through Tom Waits' album, one song character per class, that provides both a daily ritual and a model of how stories interconnect across a community.</p>
+      <div class="note-box">
+        <div class="note-box-label">Key Structural Insight</div>
+        <p>The oral history exchange on Day 2 is the most important single class of the unit. Students interview each other and hand off their written notes — they receive back a document of stories from their own life, already transcribed by someone else. This externalization makes the stories feel more real and more worthy of depicting. Don't rush it or cut it.</p>
+      </div>
+    </div>
+
+    <div class="content-section" id="waitsgiving">
+      <div class="section-eyebrow">Do Now Thread</div>
+      <div class="section-title">Waitsgiving</div>
+      <p>Every class begins the same way: a Tom Waits song plays, and students draw a slow spiral for the duration of the song. No instructions beyond that. The spiral is not assessed — it's a ritual that marks the transition into the studio. After the song, the teacher adds one sentence to the ongoing Waitsgiving story on the board: a fictional small town where each character is waiting for something, and keeps finding it in unexpected places.</p>
+      <p>The story was used last year and became repetitive by the end of the unit. <strong>For next year:</strong> the spiral ritual is a keeper, but consider varying the entry activity on some days — the story thread works best when it has narrative momentum and is not the same every single class.</p>
+      <div class="waitsgiving-box">
+        <div class="waitsgiving-label">The Waitsgiving Story — Running Thread</div>
+        <div class="waitsgiving-title">Different people, same town, all waiting</div>
+        <div class="waitsgiving-songs">
+          <div class="song-item">
+            <div class="song-name">Song 1 — Waitsgiving Founder</div>
+            <div class="song-desc">In 1997, someone found a time capsule that said "wait" with her birthday on it and created Waitsgiving Day — a holiday about patience.</div>
+          </div>
+          <div class="song-item">
+            <div class="song-name">Song 2 — The Greatness Waitress</div>
+            <div class="song-desc">A record store worker in a band, waiting for the perfect musical idea. Found inspiration in a stranger's diary tape, wrote an album, and sold twelve copies. Now she's waiting for new inspiration.</div>
+          </div>
+          <div class="song-item">
+            <div class="song-name">Song 3 — The Driver Choreographer</div>
+            <div class="song-desc">A delivery driver — the Waitress's sibling — who records their routes and dreams of turning everyday moments into choreographed dance.</div>
+          </div>
+          <div class="song-pattern">Pattern: different people, same town, all waiting for inspiration — and finding it in unexpected places. Each character is connected to the others without knowing it.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="questions">
+      <div class="section-eyebrow">Essential Questions</div>
+      <div class="section-title">Questions That Drive the Unit</div>
+      <div class="eq-list">
+        <div class="eq-item">What communities do you belong to, and what stories do those communities carry?</div>
+        <div class="eq-item">Whose stories get written down — and whose get passed person to person? What difference does it make?</div>
+        <div class="eq-item">How do artists translate a story that lives in words into an image that lives in marks?</div>
+        <div class="eq-item">What does it mean to honor a story visually — and what does it mean to exploit one?</div>
+        <div class="eq-item">How does the constraint of a medium shape the decisions an artist makes?</div>
+      </div>
+    </div>
+
+    <div class="content-section" id="standards">
+      <div class="section-eyebrow">Standards</div>
+      <div class="section-title">National Core Arts Standards</div>
+      <div class="standards-list">
+        <div class="standard-item">
+          <div class="std-code">VA:Cr1.2.Ia</div>
+          <div class="std-text">Shape an artistic investigation using a variety of approaches — students select a folklore story, identify its visual elements, and make composition decisions based on that selection.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cr2.1.Ia</div>
+          <div class="std-text">Engage in making a work of art without a preconceived plan — the etching process rewards responsiveness; the plate rubbing diagnostic mid-unit asks students to adjust based on what they see.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cr2.2.Ia</div>
+          <div class="std-text">Explain how traditional and non-traditional materials may impact human health and demonstrate safe handling of materials, tools, and equipment — addressed through drypoint tool safety and ink handling protocols.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Cn11.1.Ia</div>
+          <div class="std-text">Describe how knowledge of culture, traditions, and history may influence personal responses to art — the unit's entire research phase is grounded in this standard.</div>
+        </div>
+        <div class="standard-item">
+          <div class="std-code">VA:Re8.1.Ia</div>
+          <div class="std-text">Interpret an artwork based on understanding the work in its context — used during artist exemplar study (Tove Jansson, Vija Celmins, William Kentridge) and during critique of student work.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="technique">
+      <div class="section-eyebrow">Technical Content</div>
+      <div class="section-title">Drypoint Etching — What Works and What Doesn't</div>
+      <p>Drypoint is scratching lines into a plastic plate with a sharp tool. Ink gets trapped in the scratches, the surface is wiped clean, and paper is pressed onto the plate to pull the image. <strong>What you scratch becomes dark. What you leave smooth stays light.</strong> There is no smudging, blending, or solid fill — every value must be built through the accumulation of marks.</p>
+      <div class="technique-grid">
+        <div class="technique-card works">
+          <div class="technique-card-label">What works in drypoint</div>
+          <div class="technique-item"><span class="ti-dot">✓</span>Hatching — parallel lines that build value through proximity</div>
+          <div class="technique-item"><span class="ti-dot">✓</span>Cross-hatching — layered hatching in two+ directions for darkest values</div>
+          <div class="technique-item"><span class="ti-dot">✓</span>Contour lines that follow the form of the object</div>
+          <div class="technique-item"><span class="ti-dot">✓</span>Stippling and dots for texture and mid-tones</div>
+          <div class="technique-item"><span class="ti-dot">✓</span>Varied line weight — heavier pressure = darker, wider scratch</div>
+          <div class="technique-item"><span class="ti-dot">✓</span>Building darks through density, not through a single heavy mark</div>
+        </div>
+        <div class="technique-card doesnt">
+          <div class="technique-card-label">What doesn't work in drypoint</div>
+          <div class="technique-item"><span class="ti-dot">✗</span>Solid fills — no way to create a truly solid black area</div>
+          <div class="technique-item"><span class="ti-dot">✗</span>Smudging or blending — marks are permanent, not movable</div>
+          <div class="technique-item"><span class="ti-dot">✗</span>Smooth gradients — transitions must be built through mark density</div>
+          <div class="technique-item"><span class="ti-dot">✗</span>Large flat areas of a single tone — these print unevenly</div>
+          <div class="technique-item"><span class="ti-dot">✗</span>Erasing — scratches are permanent. Plan before you scratch.</div>
+        </div>
+      </div>
+      <div class="note-box" style="margin-top: 14px;">
+        <div class="note-box-label">The Plate Rubbing Diagnostic</div>
+        <p>Before ink arrives, students place their plate face-up on the table, lay paper over it, and rub the side of a peeled crayon across the surface. This creates a low-tech preview of the print. Students diagnose three things with arrows directly on the rubbing: <strong>Lines</strong> (can you see all your marks?), <strong>Value</strong> (is there a range from light to dark, or does everything look the same?), <strong>Texture</strong> (where you carved texture, does it read?). This is one of the most useful formative moments in the unit.</p>
+      </div>
+    </div>
+
+    <div class="content-section" id="artists">
+      <div class="section-eyebrow">Artist Exemplars</div>
+      <div class="section-title">Who We Look At</div>
+      <p>Artists are introduced alongside the technique they model — not as an art history lecture, but as evidence that the constraint students are working with has been used to make extraordinary things.</p>
+      <div class="artist-row">
+        <div class="artist-card">
+          <div class="artist-name">Tove Jansson</div>
+          <div class="artist-dates">1914–2001 · Finnish-Swedish</div>
+          <div class="artist-note">Creator of the Moomins. Master of hatching — built ALL value through line density, never solid fills. Every mark intentional. Lines follow the direction of form. Primary technical exemplar for this unit.</div>
+        </div>
+        <div class="artist-card">
+          <div class="artist-name">Vija Celmins</div>
+          <div class="artist-dates">b. 1938 · Latvian-American</div>
+          <div class="artist-note">Obsessive mark-maker. Oceans, night skies, and spider webs rendered through accumulated marks that somehow produce deep atmospheric space. Good for students chasing texture and infinite detail.</div>
+        </div>
+        <div class="artist-card">
+          <div class="artist-name">William Kentridge</div>
+          <div class="artist-dates">b. 1955 · South African</div>
+          <div class="artist-note">Printmaking as political storytelling. Work deals with memory, history, and the traces left by power. Good anchor for the "whose stories get told" essential question.</div>
+        </div>
+        <div class="artist-card">
+          <div class="artist-name">Martin Puryear</div>
+          <div class="artist-dates">b. 1941 · American</div>
+          <div class="artist-note">Known for sculpture, but his print work shows strong contour line and formal restraint. Useful contrast to Celmins — same medium, radically different approach to mark density.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="phases">
+      <div class="section-eyebrow">Phase Structure</div>
+      <div class="section-title">Four Phases</div>
+      <div class="phases">
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 1</span>
+            <span class="phase-name">Research — Community mapping and oral history exchange</span>
+            <span class="phase-classes">Days 1–3</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Students map the communities they belong to — family, neighborhood, cultural, religious, generational, online — and identify what stories circulate in each. Day 2 is the oral history exchange: structured peer interviews where Partner A tells stories (10–12 min) while Partner B transcribes, then switch. Students receive back a document of their own stories in someone else's handwriting. This externalization makes the stories feel worth depicting.</p>
+            <p>Students circle nouns in their interview notes — persons, places, things — and sketch three of them quickly on the back. This becomes the raw material for the composition research that follows.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 2</span>
+            <span class="phase-name">Technique — Mark-making and drypoint introduction</span>
+            <span class="phase-classes">Days 4–6</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Drypoint technique introduced through Tove Jansson's work as a primary exemplar. Students practice directional hatching on three forms: sphere, cylinder, cube. The constraint is established clearly: you can only build value through line density, never through solid fills or blending. Students practice on scratch paper before touching their plates.</p>
+            <p>Artist exemplars (Celmins, Kentridge, Puryear) introduced alongside student practice so technique and meaning-making are connected from the start, not separated into a lecture day and a studio day.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 3</span>
+            <span class="phase-name">Composition — Design and plate work</span>
+            <span class="phase-classes">Days 7–12</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Students select their story, identify the visual elements they want to depict, and plan their composition. Teacher approval required before plates are touched — check that the design fills the plate, has a clear focal point, uses line only (no solid fills), and tells the story clearly. Plates are scratched across six studio days, with the Waitsgiving ritual opening each class.</p>
+            <p>The plate rubbing diagnostic happens mid-phase (around Day 10) — students diagnose their own work before ink arrives. This gives them time to add more mark density or clarify areas that are reading as flat before it's too late.</p>
+          </div>
+        </div>
+
+        <div class="phase">
+          <div class="phase-header" onclick="togglePhase(this)">
+            <span class="phase-num">Phase 4</span>
+            <span class="phase-name">Printing — Inking, pulling prints, and editioning</span>
+            <span class="phase-classes">Days 13–16</span>
+            <span class="phase-toggle">▶</span>
+          </div>
+          <div class="phase-body">
+            <p>Ink arrives and printing begins. Students learn professional inking and wiping technique, pull their first print, diagnose it against their rubbing, and revise the plate if needed before pulling an edition. Prints are labeled in pencil below the image in the professional printmaker format: edition number/total (e.g., 2/5), title, and artist's signature.</p>
+            <p>The best print from each student's edition goes into the portfolio. The remainder can be exchanged — prints are one of the few art forms historically designed to be distributed and shared, which connects back to the oral history framing of the unit.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-section" id="days">
+      <div class="section-eyebrow">Day by Day</div>
+      <div class="section-title">Lesson Summaries</div>
+      <div class="days">
+
+        <div class="day-row">
+          <div class="day-label">Day 1</div>
+          <div class="day-content">
+            <div class="day-title">What is folklore? Community mapping.</div>
+            <div class="day-desc">Open with the Waitsgiving ritual: a Tom Waits song plays while students draw a slow spiral. Introduce the unit through the framing question: what stories live in the communities you're part of — not in books, but person to person? Students build a community map with their name at the center, surrounding communities labeled as circles. Thinking prompts guide them to consider family, neighborhood, cultural, religious, generational, and online communities. Exit ticket: which community do you think will have the most interesting stories to depict?</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral + story update</span>
+              <span>7–18 min: what is folklore? — examples and types</span>
+              <span>18–38 min: community mapping activity</span>
+              <span>38–45 min: exit sticky note</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 2</div>
+          <div class="day-content">
+            <div class="day-title">Oral history exchange — the most important class of the unit</div>
+            <div class="day-desc">Frame the activity before it starts: students are participating in a tradition that has kept communities alive across generations. Review storytelling norms (listen with respect, share at your comfort level, stories stay in the room). Pairs interview each other — 10–12 minutes each direction, Partner B transcribing while Partner A tells stories. Prompts available for when students get stuck. After the exchange, students receive their own interview sheet back. They circle nouns, sketch three of them on the back. Exit thought: whose stories have you heard today? What stories will you carry forward?</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral + story update</span>
+              <span>7–15 min: oral history framing — whose stories get written down?</span>
+              <span>15–18 min: storytelling norms + pair assignment</span>
+              <span>18–30 min: Partner A tells, Partner B transcribes</span>
+              <span>30–42 min: switch — Partner B tells, Partner A transcribes</span>
+              <span>42–45 min: receive your sheet back, circle nouns, exit thought</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 3</div>
+          <div class="day-content">
+            <div class="day-title">Story selection and noun sketching</div>
+            <div class="day-desc">Students review their community maps and interview notes and choose the story they want to depict. Guiding question: which story has the most visual potential — a strong character, creature, object, or moment that could anchor an image? Students sketch three of their circled nouns in more detail and begin thinking about composition: what is the focal point, what is in the background, what gets left out? Brief whole-class share: who has a story they want to tell others about?</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–18 min: story selection — which one has the most visual potential?</span>
+              <span>18–38 min: noun sketches + composition thinking</span>
+              <span>38–45 min: brief whole-class share</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 4</div>
+          <div class="day-content">
+            <div class="day-title">What is printmaking? Drypoint introduction + mark-making practice</div>
+            <div class="day-desc">Introduce drypoint through Tove Jansson's work: look at hatching, cross-hatching, line density, directional marks. Establish the core constraint clearly — you build value through line density, not through filling or blending. Students practice on scratch paper: hatching a sphere (curved marks that follow the form), a cylinder (vertical/horizontal), and a cube (directional based on planes). This is not precious — it's muscle memory practice. Finish by looking at a piece of fabric reference and attempting to crosshatch its folds.</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–20 min: drypoint introduction + Tove Jansson exemplars</span>
+              <span>20–25 min: what works and what doesn't — the constraint</span>
+              <span>25–43 min: mark-making practice — sphere, cylinder, cube, fabric</span>
+              <span>43–45 min: which form was hardest? Why?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Days 5–6</div>
+          <div class="day-content">
+            <div class="day-title">Celmins, Kentridge, Puryear + composition planning</div>
+            <div class="day-desc">Additional artist exemplars examined alongside continued practice. Celmins: what does it feel like to build infinite space out of marks? Kentridge: how does printmaking carry political memory? Puryear: how does restraint work as a compositional strategy? Students begin their full composition sketch — not on the plate yet, on paper. Design must fill the space, have a clear focal point, use line only, tell the story clearly. Teacher circulates and gives approval before any student touches a plate.</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–20 min: artist exemplars (one artist per day, not all at once)</span>
+              <span>20–43 min: full composition sketch on paper</span>
+              <span>43–45 min: self-check: focal point? Value range? Story readable?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Days 7–9</div>
+          <div class="day-content">
+            <div class="day-title">Plate work — scratching the design</div>
+            <div class="day-desc">Students who have teacher approval transfer their composition to the plate and begin scratching. Remind the class before they start: scratches are permanent. Think before you mark. Students who need more composition time continue working on paper. Teacher circulates throughout — watch for students who are drawing outlines only without building value, and redirect toward hatching inside forms early so they don't run out of time.</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–12 min: quick reminder — how to read value as you work</span>
+              <span>12–43 min: studio — plate work</span>
+              <span>43–45 min: intention-setting for next class</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 10</div>
+          <div class="day-content">
+            <div class="day-title">Plate rubbing diagnostic</div>
+            <div class="day-desc">Pause studio work for a diagnostic before ink arrives. Students place their plate face-up, lay paper over it, rub the side of a peeled crayon across the surface. They annotate their rubbing with arrows and honest answers to three questions: Can you see all the marks you made? Is there a range from light to dark? Where you carved texture, does it read? Based on the rubbing, students identify one specific thing to fix or deepen before printing. This is formative self-assessment at its most concrete.</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–12 min: demonstrate the plate rubbing technique</span>
+              <span>12–28 min: students pull rubbing and annotate</span>
+              <span>28–43 min: return to plates to address what the rubbing revealed</span>
+              <span>43–45 min: what did your rubbing tell you that you couldn't see before?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Days 11–12</div>
+          <div class="day-content">
+            <div class="day-title">Plate completion + scratchboard mini masterpiece (early finishers)</div>
+            <div class="day-desc">Final plate studio days. Students who finish early work on a scratchboard mini study from the reference library — these go on the bulletin board outside the classroom. This is not optional downtime: the scratchboard study deepens the same mark-making skills and keeps energy in the room.</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–43 min: studio — plate completion</span>
+              <span>Early finishers: scratchboard mini study from reference library</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Days 13–15</div>
+          <div class="day-content">
+            <div class="day-title">Printing — inking, wiping, pulling, editioning</div>
+            <div class="day-desc">Printing days. Technique introduced as a class before anyone inks: ink the plate, wipe the surface clean in the direction of marks (not against them), press paper firmly, peel from corner. Students pull their first print, compare it to their rubbing diagnostic, decide if the plate needs revision before pulling an edition. Final edition of 5 prints. Students label in pencil: edition number/total, title of the story depicted, signature. The best print goes to portfolio; extras can be exchanged or kept.</div>
+            <div class="day-timing">
+              <span>0–7 min: Waitsgiving spiral</span>
+              <span>7–18 min: printing technique demo (Day 13 only)</span>
+              <span>18–43 min: inking, pulling, editioning (rotating through press)</span>
+              <span>43–45 min: compare first print to rubbing — what changed?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <div class="day-label">Day 16</div>
+          <div class="day-content">
+            <div class="day-title">Gallery, written folklore sheet, and reflection</div>
+            <div class="day-desc">Best prints displayed in a gallery. Students write their folklore sheet — a one-paragraph description of the story they depicted: what it is, where it comes from, why they chose it. This is the artist statement for this unit. Brief gallery share: three volunteers share their story aloud. Reflection in sketchbook: what story from someone else's interview stayed with you? Why? Prints go into binders. Unit closes by returning to the oral history framing: you just kept a story alive that might not have been recorded anywhere else.</div>
+            <div class="day-timing">
+              <span>0–7 min: final Waitsgiving spiral — end of the story</span>
+              <span>7–20 min: gallery with prints displayed</span>
+              <span>20–32 min: write folklore sheet (artist statement)</span>
+              <span>32–42 min: three volunteers share their story aloud</span>
+              <span>42–45 min: sketchbook reflection</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="content-section" id="printing">
+      <div class="section-eyebrow">Technical Reference</div>
+      <div class="section-title">The Printing Process — Step by Step</div>
+      <div class="printing-steps">
+        <div class="print-step">
+          <div class="print-step-num">1</div>
+          <div>
+            <div class="print-step-title">Ink the plate</div>
+            <div class="print-step-desc">Apply a small amount of etching ink to the plate surface using a card or dauber. Work the ink into the scratches so it fills all the marks. The whole surface will be covered — that's correct.</div>
+          </div>
+        </div>
+        <div class="print-step">
+          <div class="print-step-num">2</div>
+          <div>
+            <div class="print-step-title">Wipe the surface</div>
+            <div class="print-step-desc">Using a tarlatan cloth or stiff paper, wipe the flat surface of the plate clean. Wipe in the direction of marks, not against them, to avoid pulling ink out of the scratches. The scratches should stay dark; the surface should come clean.</div>
+          </div>
+        </div>
+        <div class="print-step">
+          <div class="print-step-num">3</div>
+          <div>
+            <div class="print-step-title">Position and press</div>
+            <div class="print-step-desc">Lay dampened paper over the plate. Apply firm, even pressure across the whole surface using a baren or by running through the press. The paper pulls the ink out of the scratches.</div>
+          </div>
+        </div>
+        <div class="print-step">
+          <div class="print-step-num">4</div>
+          <div>
+            <div class="print-step-title">Peel and dry</div>
+            <div class="print-step-desc">Peel the paper from one corner slowly and steadily. Lay flat to dry. Compare to your plate rubbing — what printed more clearly than expected? What needs more depth?</div>
+          </div>
+        </div>
+        <div class="print-step">
+          <div class="print-step-num">5</div>
+          <div>
+            <div class="print-step-title">Label the edition</div>
+            <div class="print-step-desc">In pencil, below the image: edition number / total (e.g., 2/5), then the title of the story depicted, then your signature. This is professional printmaker convention — not optional.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="udl">
+      <div class="section-eyebrow">UDL Supports</div>
+      <div class="section-title">Universal Design Considerations</div>
+      <div class="udl-grid">
+        <div class="udl-card">
+          <div class="udl-card-label">Engagement</div>
+          <div class="udl-item">Story choice is fully student-directed — any community, any tradition, any type of folklore</div>
+          <div class="udl-item">The oral history exchange creates authentic audience for student stories before they're depicted</div>
+          <div class="udl-item">Waitsgiving ritual provides consistent daily entry point that isn't tied to skill level</div>
+          <div class="udl-item">Scratchboard mini study keeps early finishers engaged without pulling them out of the medium</div>
+          <div class="udl-item">Printing as distribution — prints are meant to be shared, which connects to the unit's oral history framing</div>
+        </div>
+        <div class="udl-card">
+          <div class="udl-card-label">Representation</div>
+          <div class="udl-item">Oral history framing explicitly names whose stories get left out of written history — centers student knowledge</div>
+          <div class="udl-item">Artist exemplars span Finnish-Swedish, Latvian-American, South African, American — not a single tradition</div>
+          <div class="udl-item">Plate rubbing diagnostic makes the invisible visible — students see their plate as an image for the first time</div>
+          <div class="udl-item">Composition checklist posted throughout — students can self-assess at any point in the process</div>
+          <div class="udl-item">Storytelling norms established before the oral history exchange — lowers anxiety for sharing</div>
+        </div>
+        <div class="udl-card">
+          <div class="udl-card-label">Action & Expression</div>
+          <div class="udl-item">Composition planning on paper first — students work out decisions before committing to the plate</div>
+          <div class="udl-item">Teacher approval gate before plate work — catches problems early when they're still fixable</div>
+          <div class="udl-item">Folklore written sheet allows students to provide context for imagery that might not read clearly</div>
+          <div class="udl-item">Edition of 5 prints means the first pull is diagnostic, not final — revision is built into the process</div>
+          <div class="udl-item">Sketchbook reflections can be written, drawn, or annotated — format is student's choice</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section" id="prep">
+      <div class="section-eyebrow">Teacher Prep</div>
+      <div class="section-title">Before the Unit Starts</div>
+      <div class="checklist">
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Order etching ink well in advance — shipping delays can disrupt the printing phase significantly (it happened this year during a blizzard)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare plastic drypoint plates — one per student plus extras for scratchboard mini studies</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare drypoint tools — check points are intact and sharp</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare oral history interview sheet (two-sided: questions on front, space to transcribe on back)</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare folklore written sheet / artist statement template</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Download and queue Tom Waits tracks for the Waitsgiving spiral Do Now — have a consistent playlist ready</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Write out the Waitsgiving story arc in advance — know where each character goes before class starts</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare scratch paper and scratchboard for practice and early-finisher work</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare crayons (with wrappers to peel) for plate rubbing diagnostic</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Prepare tarlatan cloth or wiping material for inking days</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Dampen printing paper the night before printing days — paper needs to be moist to receive ink properly</span></div>
+        <div class="check-item"><div class="check-box" onclick="toggleCheck(this)"></div><span>Post composition checklist before Day 7: fills plate · clear focal point · line only · value range · story readable · teacher approval</span></div>
+      </div>
+
+      <div class="note-box" style="margin-top: 24px;">
+        <div class="note-box-label">For Next Year — Do Now Thread</div>
+        <p>The Waitsgiving spiral ritual is worth keeping as a unit-opening structure — it signals transition, creates calm, and builds toward the storytelling themes. But running the same story thread for 16 consecutive classes became repetitive this year. Consider either a shorter Waitsgiving arc (8 classes) followed by a different Do Now structure, or building more narrative stakes and character development into the story so each addition genuinely moves it forward.</p>
+      </div>
+
+      <div class="note-box" style="margin-top: 12px;">
+        <div class="note-box-label">Appropriation vs. Honoring — Handle Early</div>
+        <p>Some students will want to depict stories from traditions that aren't their own. Address this directly and early — not as a prohibition, but as a design constraint that requires additional care: research, attribution, and an explicit note in the folklore sheet about the relationship between the student and the tradition. The question is not "can you?" but "how are you approaching it?"</p>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<script>
+function togglePhase(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector('.phase-toggle');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open');
+  toggle.classList.toggle('open');
+  header.classList.toggle('is-open', !isOpen);
+}
+function toggleCheck(box) {
+  box.classList.toggle('checked');
+  box.textContent = box.classList.contains('checked') ? '✓' : '';
+}
+</script>
+</body>
+</html>
